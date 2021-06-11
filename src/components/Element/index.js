@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react"
+import Cell from "../Cell"
 
 function Element() {
   const [data, setData] = useState([])
+
   const getData = () => {
     fetch("data.json", {
       headers: {
@@ -9,21 +11,22 @@ function Element() {
         Accept: "application/json",
       },
     })
-      .then(function (response) {
-        console.log(response)
+      .then((response) => {
         return response.json()
       })
-      .then(function (myJson) {
-        console.log(myJson)
+      .then((myJson) => {
         setData(myJson)
       })
   }
+
   useEffect(() => {
     getData()
   }, [])
   return (
     <div className='Element'>
-      {data && data.length > 0 && data.map((item) => <p>{item.name}</p>)}
+      {data &&
+        data.length > 0 &&
+        data.map((item) => <Cell element={item.name} />)}
     </div>
   )
 }
