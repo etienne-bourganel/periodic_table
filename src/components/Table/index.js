@@ -1,13 +1,15 @@
 import React from "react"
+import createPeriodicTable from "../../modules/createPeriodicTable"
 import "./index.css"
-import Cell from "../Cell"
 
-const Table = ({ data }) => {
+const Table = () => {
+  const periodicTable = createPeriodicTable()
+
   return (
     <div>
       <div className='Table'>
-        {data.map((item) => (
-          <Cell number={item.number} symbol={item.symbol} name={item.name} />
+        {periodicTable.map((item) => (
+          <div key={item}>{`[ ${item[0]} , ${item[1]} ]`}</div>
         ))}
       </div>
     </div>
@@ -15,3 +17,14 @@ const Table = ({ data }) => {
 }
 
 export default Table
+
+// {
+//   data.map((item) => (
+//     <Cell
+//       key={item.number}
+//       number={item.number}
+//       symbol={item.symbol}
+//       name={item.name}
+//     />
+//   ))
+// }
