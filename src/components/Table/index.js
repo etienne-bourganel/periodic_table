@@ -1,10 +1,15 @@
 import React from "react"
 import "./index.css"
+import Cell from "../Cell"
 
-const Table = () => {
+const Table = ({ data }) => {
   return (
-    <div className='Table'>
-      <p>PLACEHOLDER FOR THE TABLE</p>
+    <div>
+      <div className='Table'>
+        {data.map((item) => (
+          <Cell number={item.number} symbol={item.symbol} name={item.name} />
+        ))}
+      </div>
     </div>
   )
 }

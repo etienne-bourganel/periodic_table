@@ -1,0 +1,9 @@
+.Cell {
+  border: 1px solid #fff;
+  margin: 0.2em;
+}
+
+.Cell:hover {
+  background-color: rgb(226, 237, 123);
+  color: rgb(186, 30, 176);
+}

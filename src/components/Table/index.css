@@ -13,7 +13,10 @@
 } */
 
 .Table {
-  background-color: #282c34;
+  background-color: #26437d;
   color: #fff;
-  font-size: 4em;
+  display: grid;
+  font-size: 1em;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 1em;
 }
