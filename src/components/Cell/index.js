@@ -1,12 +1,12 @@
 import React from "react"
+
 import "./index.css"
 
-const Cell = ({ number, symbol, name }) => {
+const Cell = ({ period, group }) => {
   return (
     <div className='Cell'>
-      <div>{number}</div>
-      <div>{symbol}</div>
-      <div>{name}</div>
+      <div>g-{group}</div>
+      <div>p-{period}</div>
     </div>
   )
 }

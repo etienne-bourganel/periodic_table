@@ -1,9 +1,9 @@
 const createPeriodicTable = () => {
   let table = []
 
-  for (let i = 1; i <= 9; i++) {
-    for (let j = 1; j <= 18; j++) {
-      table.push([i, j])
+  for (let period = 1; period <= 9; period++) {
+    for (let group = 1; group <= 18; group++) {
+      table.push([period, group])
     }
   }
 
