@@ -1,20 +1,18 @@
 import React from "react"
-import createPeriodicTable from "../../modules/createPeriodicTable"
 import Cell from "../Cell"
 import "./index.css"
+import createPeriodicTable from "../../modules/createPeriodicTable"
+// const periodicTable = require("../../data/data.json")
 
 const Table = () => {
-  const periodicTable = createPeriodicTable()
+  const tableTemplate = createPeriodicTable()
+  console.log(tableTemplate)
 
   return (
     <div>
       <div className='Table'>
-        {periodicTable.map((item) => (
-          <Cell
-            key={`${item[0]}- ${item[1]}`}
-            period={item[0]}
-            group={item[1]}
-          />
+        {tableTemplate.map((element) => (
+          <Cell key={element.number} props={element} />
         ))}
       </div>
     </div>

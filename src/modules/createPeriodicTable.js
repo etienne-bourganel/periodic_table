@@ -1,13 +1,22 @@
-const createPeriodicTable = () => {
-  let table = []
+const periodicTable = require("../data/data.json")
 
-  for (let period = 1; period <= 9; period++) {
-    for (let group = 1; group <= 18; group++) {
-      table.push([period, group])
+const createPeriodicTable = () => {
+  let emptyTable = []
+
+  for (let ypos = 1; ypos <= 9; ypos++) {
+    for (let xpos = 1; xpos <= 18; xpos++) {
+      emptyTable.push({ xpos, ypos })
     }
   }
 
-  return table
+  const tableTemplate = emptyTable.map(
+    (cell) =>
+      periodicTable.elements.find(
+        (element) => element.xpos === cell.xpos && element.ypos === cell.ypos
+      ) || { ...cell, data: null }
+  )
+
+  return tableTemplate
 }
 
 export default createPeriodicTable

@@ -2,13 +2,17 @@ import React from "react"
 
 import "./index.css"
 
-const Cell = ({ period, group }) => {
-  return (
-    <div className='Cell'>
-      <div>g-{group}</div>
-      <div>p-{period}</div>
-    </div>
-  )
+const Cell = ({ props }) => {
+  if (props.name) {
+    return (
+      <div className='Cell'>
+        <div>{props.symbol}</div>
+        <div>{props.name}</div>
+      </div>
+    )
+  } else {
+    return <div></div>
+  }
 }
 
 export default Cell
