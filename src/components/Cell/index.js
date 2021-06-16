@@ -7,16 +7,17 @@ const Cell = ({ props }) => {
   }
 
   if (props.name) {
+    const categoryClass = props.category.substring(0, 7).trim()
     return (
-      <div className='Cell' onClick={handleClick}>
-        <div className='ElementNumber'>{props.number}</div>
-        <div className='Symbol'>{props.symbol}</div>
-        <div className='ElementName'>{props.name}</div>
-        <div className='AtomicMass'>{props.atomic_mass.toFixed(2)}</div>
+      <div className={`Cell elmtCell ${categoryClass}`} onClick={handleClick}>
+        <div className='elmtNumber'>{props.number}</div>
+        <div className='elmtSymbol'>{props.symbol}</div>
+        <div className='elmtName'>{props.name}</div>
+        <div className='elmtInfo'>{props.atomic_mass.toFixed(2)}</div>
       </div>
     )
   } else {
-    return <div className='emptyCell'></div>
+    return <div className='Cell emptyCell'></div>
   }
 }
 

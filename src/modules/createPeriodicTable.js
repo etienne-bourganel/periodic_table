@@ -4,7 +4,7 @@ const createPeriodicTable = () => {
   let emptyTable = []
 
   for (let ypos = 0; ypos <= 10; ypos++) {
-    for (let xpos = 0; xpos <= 18; xpos++) {
+    for (let xpos = 0; xpos <= 19; xpos++) {
       emptyTable.push({ xpos, ypos })
     }
   }
