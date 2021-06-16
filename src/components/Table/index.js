@@ -2,7 +2,6 @@ import React from "react"
 import Cell from "../Cell"
 import "./index.css"
 import createPeriodicTable from "../../modules/createPeriodicTable"
-// const periodicTable = require("../../data/data.json")
 
 const Table = () => {
   const tableTemplate = createPeriodicTable()

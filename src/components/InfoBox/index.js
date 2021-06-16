@@ -1,7 +1,7 @@
 import React from "react"
 import "./index.css"
 
-const InfoBox = ({ props }) => {
+const InfoBox = () => {
   const infoToShow = [
     "name",
     "appearance",
@@ -15,21 +15,19 @@ const InfoBox = ({ props }) => {
     "summary",
   ]
 
-  const titlefy = (item) => {
-    // Ex: titlefy(atomic_mass) => "Atomic Mass: "
+  const titlefy = (str) => {
+    return str.replace("_", " ").charAt(0).toUpperCase() + str.slice(1) + " : "
   }
 
-  const createInfoDivs = ({ props }) => {
-    infoToShow.forEach((infoItem) => {
-      return (
-        <div>
-          {props}.{infoItem}
-        </div>
-      )
-    })
-  }
-
-  return <div className='InfoBox'>{createInfoDivs({ props })}</div>
+  return (
+    <div>
+      <div className='InfoBox'>
+        {infoToShow.map((infoItem) => (
+          <InfoBoxLine key={infoItem} infoTitle={titlefy(infoItem)} />
+        ))}
+      </div>
+    </div>
+  )
 }
 
 export default InfoBox
