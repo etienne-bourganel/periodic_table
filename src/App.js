@@ -1,12 +1,12 @@
 import "./App.css"
 import React from "react"
 import Table from "./components/Table"
-import UnderConctruction from "./components/UnderConstruction"
+import AppHeader from "./components/AppHeader"
 
 function App() {
   return (
     <div className='App'>
-      <UnderConctruction />
+      <AppHeader />
       <Table />
     </div>
   )

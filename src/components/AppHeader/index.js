@@ -1,22 +1,19 @@
 import React from "react"
 import "./index.css"
 
-const UnderConctruction = () => {
+const AppHeader = () => {
   return (
     <header className='App-header'>
-      <p>
-        🙋🏻‍♂️ Hi there! The Periodic Table of Elements is under construction. 🚧
-      </p>
       <a
-        className='App-link'
+        className='Title'
         href='https://en.wikipedia.org/wiki/Periodic_table'
         target='_blank'
         rel='noopener noreferrer'
       >
-        Periodic Table on Wikipedia
+        Periodic Table of Elements
       </a>
     </header>
   )
 }
 
-export default UnderConctruction
+export default AppHeader

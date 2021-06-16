@@ -16,8 +16,8 @@
 }
 
 .elmtCell:hover {
-  background-color: rgb(226, 237, 123);
-  color: rgb(186, 30, 176);
+  background-color: transparent;
+  box-shadow: inset 0 0 5px #efca08;
 }
 
 .elmtNumber {
@@ -32,8 +32,10 @@
 }
 
 .elmtName {
+  color: #fff;
+  font-weight: 500;
   grid-area: elmtName;
-  font-size: 0.6vw;
+  font-size: 0.65vw;
 }
 
 .elmtInfo {
@@ -42,56 +44,67 @@
 }
 
 .diatomi {
-  border-color: rgb(75, 215, 57);
-  color: rgb(75, 215, 57);
+  background-color: #00a8971e;
+  border-color: #00a896;
+  color: #00a896;
 }
 
 .alkali {
-  border-color: rgb(193, 93, 186);
-  color: rgb(193, 93, 186);
+  background-color: #ff7e472c;
+  border-color: #ff7e47;
+  color: #ff7e47;
 }
 
 .alkalin {
-  border-color: rgb(226, 237, 123);
-  color: rgb(226, 237, 123);
+  background-color: #e7eb9021;
+  border-color: #e7eb90;
+  color: #e7eb90;
 }
 
 .transit {
-  border-color: salmon;
-  color: salmon;
+  background-color: #a9f8fb14;
+  border-color: #a9f8fb;
+  color: #a9f8fb;
 }
 
 .metallo {
-  border-color: seagreen;
-  color: seagreen;
+  background-color: #e2739625;
+  border-color: #e27396;
+  color: #e27396;
 }
 
 .polyato {
-  border-color: rgb(49, 204, 212);
-  color: rgb(49, 204, 212);
+  background-color: #95abda25;
+  border-color: #95abda;
+  color: #95abda;
 }
 
 .noble {
-  border-color: gold;
-  color: gold;
+  background-color: #ebc69925;
+  border-color: #ebc699;
+  color: #ebc699;
 }
 
 .post-tr {
-  border-color: lightgoldenrodyellow;
-  color: lightgoldenrodyellow;
+  background-color: #f4fdaf1b;
+  border-color: #f4fdaf;
+  color: #f4fdaf;
 }
 
 .unknown {
-  border-color: lightpink;
-  color: lightpink;
+  background-color: #f4607925;
+  border-color: #f46079;
+  color: #f46079;
 }
 
 .lanthan {
-  border-color: lime;
-  color: lime;
+  background-color: #64f58d10;
+  border-color: #64f58d;
+  color: #64f58d;
 }
 
 .actinid {
-  border-color: magenta;
-  color: magenta;
+  background-color: #4ce0d119;
+  border-color: #4ce0d2;
+  color: #4ce0d2;
 }
