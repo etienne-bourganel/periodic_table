@@ -3,8 +3,8 @@ const periodicTable = require("../data/data.json")
 const createPeriodicTable = () => {
   let emptyTable = []
 
-  for (let ypos = 1; ypos <= 9; ypos++) {
-    for (let xpos = 1; xpos <= 18; xpos++) {
+  for (let ypos = 0; ypos <= 10; ypos++) {
+    for (let xpos = 0; xpos <= 18; xpos++) {
       emptyTable.push({ xpos, ypos })
     }
   }

@@ -1,9 +1,44 @@
 .Cell {
   border: 1px solid #fff;
+  display: grid;
+  grid-template-areas:
+    "elSymbol number"
+    "name name"
+    "info info";
+  height: 7em;
+  padding: 0.4em;
+  width: 7em;
   margin: 0.2em;
 }
 
+.emptyCell {
+  border: 1px solid #fff;
+  height: 7em;
+  padding: 0.4em;
+  width: 7em;
+  margin: 0.2em;
+}
 .Cell:hover {
   background-color: rgb(226, 237, 123);
   color: rgb(186, 30, 176);
+}
+
+.ElementNumber {
+  grid-area: number;
+  font-size: 1em;
+
+  text-align: end;
+}
+
+.Symbol {
+  grid-area: elSymbol;
+  font-size: 3em;
+}
+
+.ElementName {
+  grid-area: name;
+}
+
+.AtomicMass {
+  grid-area: info;
 }
