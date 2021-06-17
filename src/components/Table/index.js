@@ -5,13 +5,15 @@ import createPeriodicTable from "../../modules/createPeriodicTable"
 
 const Table = () => {
   const tableTemplate = createPeriodicTable()
-  console.log(tableTemplate)
 
   return (
     <div>
       <div className='Table'>
-        {tableTemplate.map((element) => (
-          <Cell key={element.number} props={element} />
+        {tableTemplate.map((cellInfo) => (
+          <Cell
+            key={`x${cellInfo.xpos}y${cellInfo.ypos}`}
+            elementInfo={cellInfo}
+          />
         ))}
       </div>
     </div>

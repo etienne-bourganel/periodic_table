@@ -1,19 +1,39 @@
 import React from "react"
 import "./index.css"
+import InfoBox from "../InfoBox"
 
-const Cell = ({ props }) => {
+const Cell = ({ elementInfo }) => {
   const handleClick = () => {
-    window.open(props.source, "_blank")
+    // window.open(elementInfo.source, "_blank")
+    return infoToShow.forEach((infoItem) => {
+      console.log(titlefy(infoItem) + elementInfo[infoItem])
+    })
   }
 
-  if (props.name) {
-    const categoryClass = props.category.substring(0, 7).trim()
+  const infoToShow = [
+    "name",
+    "appearance",
+    "atomic_mass",
+    "boil",
+    "category",
+    "density",
+    "discovered_by",
+    "phase",
+    "summary",
+  ]
+
+  const titlefy = (str) => {
+    return (str.charAt(0).toUpperCase() + str.slice(1) + ": ").replace("_", " ")
+  }
+
+  if (elementInfo.name) {
+    const categoryClass = elementInfo.category.substring(0, 7).trim()
     return (
       <div className={`Cell elmtCell ${categoryClass}`} onClick={handleClick}>
-        <div className='elmtNumber'>{props.number}</div>
-        <div className='elmtSymbol'>{props.symbol}</div>
-        <div className='elmtName'>{props.name}</div>
-        <div className='elmtInfo'>{props.atomic_mass.toFixed(2)}</div>
+        <div className='elmtNumber'>{elementInfo.number}</div>
+        <div className='elmtSymbol'>{elementInfo.symbol}</div>
+        <div className='elmtName'>{elementInfo.name}</div>
+        <div className='elmtInfo'>{elementInfo.atomic_mass.toFixed(2)}</div>
       </div>
     )
   } else {
