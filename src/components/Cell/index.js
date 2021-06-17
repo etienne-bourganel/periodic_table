@@ -5,9 +5,10 @@ const Cell = ({ elementInfo }) => {
   const handleClick = () => {
     // window.open(elementInfo.source, "_blank")
 
-    return infoToShow.forEach((infoItem) => {
+    infoToShow.forEach((infoItem) => {
       console.log(titlefy(infoItem) + elementInfo[infoItem])
     })
+    console.log("\n")
   }
 
   const infoToShow = [
