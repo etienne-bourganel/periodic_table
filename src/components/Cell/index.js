@@ -1,30 +1,10 @@
 import React from "react"
 import "./index.css"
 
-const Cell = ({ elementInfo }) => {
+const Cell = ({ elementInfo, onClickFunc }) => {
   const handleClick = () => {
     // window.open(elementInfo.source, "_blank")
-
-    infoToShow.forEach((infoItem) => {
-      console.log(titlefy(infoItem) + elementInfo[infoItem])
-    })
-    console.log("\n")
-  }
-
-  const infoToShow = [
-    "name",
-    "appearance",
-    "atomic_mass",
-    "boil",
-    "category",
-    "density",
-    "discovered_by",
-    "phase",
-    "summary",
-  ]
-
-  const titlefy = (str) => {
-    return (str.charAt(0).toUpperCase() + str.slice(1) + ": ").replace("_", " ")
+    onClickFunc(elementInfo)
   }
 
   if (elementInfo.name) {
