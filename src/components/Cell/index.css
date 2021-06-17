@@ -12,12 +12,15 @@
     "elmtSymbol elmtNumber"
     "elmtName elmtName"
     "elmtInfo elmtInfo";
-  padding: 0.2em;
+  padding: 0.15em;
 }
 
-.elmtCell:hover {
-  background-color: rgb(0, 6, 50);
+.periodOrGroupCell {
+  align-items: center;
   color: #fff;
+  display: flex;
+  font-size: 1.5em;
+  justify-content: center;
 }
 
 .elmtNumber {
@@ -107,4 +110,11 @@
   background-color: #4ce0d119;
   border-color: #4ce0d2;
   color: #4ce0d2;
+}
+
+.elmtCell:hover {
+  background-color: rgb(0, 6, 50);
+  border: 2px solid #fff;
+  color: #fc620f;
+  padding: 0.1em;
 }

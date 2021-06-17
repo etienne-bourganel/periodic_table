@@ -1,10 +1,10 @@
 import React from "react"
 import "./index.css"
-import InfoBox from "../InfoBox"
 
 const Cell = ({ elementInfo }) => {
   const handleClick = () => {
     // window.open(elementInfo.source, "_blank")
+
     return infoToShow.forEach((infoItem) => {
       console.log(titlefy(infoItem) + elementInfo[infoItem])
     })
@@ -36,9 +36,19 @@ const Cell = ({ elementInfo }) => {
         <div className='elmtInfo'>{elementInfo.atomic_mass.toFixed(2)}</div>
       </div>
     )
-  } else {
-    return <div className='Cell emptyCell'></div>
-  }
+  } else if (
+    elementInfo.ypos === 0 &&
+    elementInfo.xpos > 0 &&
+    elementInfo.xpos < 19
+  ) {
+    return <div className='Cell periodOrGroupCell'>{elementInfo.xpos}</div>
+  } else if (
+    elementInfo.xpos === 0 &&
+    elementInfo.ypos > 0 &&
+    elementInfo.ypos < 8
+  ) {
+    return <div className='Cell periodOrGroupCell'>{elementInfo.ypos}</div>
+  } else return <div className='Cell emptyCell'></div>
 }
 
 export default Cell
