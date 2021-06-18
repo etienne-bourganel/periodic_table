@@ -1,4 +1,4 @@
-const showElementInfo = (elementInfo) => {
+const createElementInfoArray = (elementInfo) => {
   const infoToShow = [
     "name",
     "appearance",
@@ -11,13 +11,16 @@ const showElementInfo = (elementInfo) => {
     "summary",
   ]
 
+  let elementInfoArray = []
   const titlefy = (str) => {
     return (str.charAt(0).toUpperCase() + str.slice(1) + ": ").replace("_", " ")
   }
   infoToShow.forEach((infoItem) => {
-    console.log(titlefy(infoItem) + elementInfo[infoItem])
+    const infoLine = titlefy(infoItem) + elementInfo[infoItem]
+    elementInfoArray.push(infoLine)
   })
-  console.log("\n")
+
+  return elementInfoArray
 }
 
-export default showElementInfo
+export default createElementInfoArray

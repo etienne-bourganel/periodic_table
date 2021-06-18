@@ -1,10 +1,10 @@
 import React from "react"
 import "./index.css"
 
-const Cell = ({ elementInfo, showElementInfo }) => {
+const Cell = ({ elementInfo, updateInfoBox }) => {
   const handleClick = () => {
     // window.open(elementInfo.source, "_blank")
-    showElementInfo(elementInfo)
+    updateInfoBox(elementInfo)
   }
 
   if (elementInfo.name) {

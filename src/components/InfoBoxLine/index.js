@@ -1,10 +1,12 @@
 import React from "react"
 import "./index.css"
 
-const InFoBoxLine = ({ infoTitle, props }) => {
+const InfoBoxLine = ({ props }) => {
   return (
     <div>
-      `${titlefy(props.infoItem)}`+ props.${infoItem}
+      <div className='InfoBoxLine'>{props}</div>
     </div>
   )
 }
+
+export default InfoBoxLine
