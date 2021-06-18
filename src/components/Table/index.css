@@ -1,6 +1,7 @@
 .Table {
   display: grid;
   gap: 0.1em;
+
   grid-template-columns: repeat(20, 5%);
   grid-template-rows: repeat(12, 1fr);
   overflow: hidden;

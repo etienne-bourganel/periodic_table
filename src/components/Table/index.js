@@ -17,7 +17,7 @@ const Table = () => {
   const [InfoBoxData, setInfoBoxData] = useState([])
 
   return (
-    <div>
+    <div className='TableAndInfoBoxContainer'>
       <div className='Table'>
         {tableTemplate.map((cellInfo) => (
           <Cell

@@ -3,7 +3,7 @@ import "./index.css"
 
 const InfoBoxLine = ({ props }) => {
   return (
-    <div>
+    <div classname={`${props.substring(0, 4)}`}>
       <div className='InfoBoxLine'>{props}</div>
     </div>
   )
