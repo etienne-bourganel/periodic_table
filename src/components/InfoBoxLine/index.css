@@ -9,12 +9,12 @@
   width: 80vw;
 }
 
+.Name {
+  color: rgb(47, 184, 19);
+  font-weight: 700;
+}
+
 .InfoBoxLine {
   color: #fff;
   margin: 0.2em;
-}
-
-.Name {
-  background-color: azure;
-  color: red;
 }
