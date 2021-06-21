@@ -1,20 +1,17 @@
 import React, { useState } from "react"
 import Cell from "../Cell"
-import InfoBoxLine from "../InfoBoxLine"
+import InfoBox from "../InfoBox"
 import "./index.css"
 import createPeriodicTable from "../../modules/createPeriodicTable"
-import createElementInfoArray from "../../modules/createElementInfoArray"
 
 const Table = () => {
   const tableTemplate = createPeriodicTable()
 
   const updateInfoBox = (elementInfo) => {
-    const data = createElementInfoArray(elementInfo)
-    setInfoBoxData(data)
-    console.log(data)
+    setInfoBoxData(elementInfo)
   }
 
-  const [InfoBoxData, setInfoBoxData] = useState([])
+  const [InfoBoxData, setInfoBoxData] = useState({})
 
   return (
     <div className='TableAndInfoBoxContainer'>
@@ -27,10 +24,8 @@ const Table = () => {
           />
         ))}
       </div>
-      <div className='InfoBox'>
-        {InfoBoxData.map((InfoLine) => (
-          <InfoBoxLine key={InfoLine} props={InfoLine} />
-        ))}
+      <div>
+        <InfoBox ElementInfoJSON={InfoBoxData} />
       </div>
     </div>
   )

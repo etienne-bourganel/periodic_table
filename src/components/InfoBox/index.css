@@ -1,17 +1,12 @@
 .InfoBox {
   border: 1px solid #fff;
   box-sizing: border-box;
-  /* color: #fff; */
+  color: #fff;
   display: grid;
   font-size: 0.8em;
   margin: 1em;
   padding: 0.8em;
   width: 80vw;
-}
-
-.Name {
-  color: rgb(47, 184, 19);
-  font-weight: 700;
 }
 
 .InfoBoxLine {
