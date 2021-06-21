@@ -2,10 +2,12 @@ import React from "react"
 import "./index.css"
 
 const InfoBoxItem = ({ infoItemTitle, infoItem }) => {
+  const itemTitleClass = infoItemTitle.substring(0, 4)
+
   return (
-    <div className={infoItemTitle.substring[(0, 3)]}>
-      <span>{infoItemTitle}</span>
-      <span>{infoItem}</span>
+    <div className={`InfoBoxItem ${itemTitleClass} `}>
+      <span className='InfoTitle'>{infoItemTitle}</span>
+      <span className='InfoItem'>{infoItem}</span>
     </div>
   )
 }

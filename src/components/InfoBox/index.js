@@ -4,6 +4,7 @@ import InfoBoxItem from "../InfoBoxItem"
 
 const InfoBox = ({ ElementInfoJSON }) => {
   const infoToShow = [
+    "symbol",
     "name",
     "atomic_mass",
     "category",

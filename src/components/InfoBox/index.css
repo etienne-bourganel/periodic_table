@@ -1,15 +1,21 @@
 .InfoBox {
-  border: 1px solid #fff;
+  border: 1px solid rgb(116, 116, 116);
   box-sizing: border-box;
   color: #fff;
   display: grid;
   font-size: 0.8em;
-  margin: 1em;
+  height: fit-content;
+  grid-template-areas:
+    "info summary"
+    "info summary"
+    "info summary"
+    "info summary"
+    "info summary"
+    "info summary"
+    "info summary";
+  grid-template-columns: 2fr 3fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  margin: 5em auto;
   padding: 0.8em;
-  width: 80vw;
-}
-
-.InfoBoxLine {
-  color: #fff;
-  margin: 0.2em;
+  width: 60vw;
 }

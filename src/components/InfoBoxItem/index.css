@@ -1,0 +1,15 @@
+.InfoBoxItem {
+  font-size: 1.25vw;
+  height: 3em;
+  line-height: 1.5;
+  margin-bottom: 0.8em;
+}
+
+.InfoTitle {
+  color: #61dafb;
+  font-weight: 600;
+}
+
+.Summ {
+  grid-area: summary;
+}
