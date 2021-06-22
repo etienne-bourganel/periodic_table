@@ -3,19 +3,20 @@ import "./index.css"
 
 const Cell = ({ elementInfo, updateInfoBox }) => {
   const handleClick = () => {
-    window.open(elementInfo.source, "_blank")
+    updateInfoBox(elementInfo)
+    // window.open(elementInfo.source, "_blank")
   }
 
-  const handleMouseEnter = () => {
-    updateInfoBox(elementInfo)
-  }
+  // const handleMouseEnter = () => {
+  //   updateInfoBox(elementInfo)
+  // }
 
   if (elementInfo.name) {
     const categoryClass = elementInfo.category.substring(0, 7).trim()
     return (
       <div
         className={`Cell elmtCell ${categoryClass}`}
-        onMouseEnter={handleMouseEnter}
+        // onMouseEnter={handleMouseEnter}
         onClick={handleClick}
       >
         <div className='elmtNumber'>{elementInfo.number}</div>
