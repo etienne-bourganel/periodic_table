@@ -5,17 +5,19 @@
   display: grid;
   font-size: 0.8em;
   height: fit-content;
+  gap: 2vw;
   grid-template-areas:
-    "info summary"
-    "info summary"
-    "info summary"
-    "info summary"
-    "info summary"
-    "info summary"
-    "info summary";
-  grid-template-columns: 2fr 3fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    "info info summary"
+    "info info summary"
+    "info info summary"
+    "info info summary"
+    "info info summary"
+    "info info summary"
+    "info info summary"
+    "info info summary";
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-rows: 1fr 1fr 1fr;
   margin: 5em auto;
   padding: 0.8em;
-  width: 60vw;
+  width: 50vw;
 }
