@@ -15,14 +15,6 @@
   padding: 0.15em;
 }
 
-.periodOrGroupCell {
-  align-items: center;
-  color: rgb(116, 116, 116);
-  display: flex;
-  font-size: 2vw;
-  justify-content: center;
-}
-
 .elmtNumber {
   grid-area: elmtNumber;
   font-size: 1vw;
