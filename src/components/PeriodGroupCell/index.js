@@ -6,7 +6,7 @@ const PeriodGroupCell = ({
   sendPeriodOrGroupCoordinates,
   resetPeriodOrGroupCoordinates,
 }) => {
-  const handleMouseEnter = () => {
+  const handleMouseOver = () => {
     sendPeriodOrGroupCoordinates()
   }
 
@@ -17,7 +17,7 @@ const PeriodGroupCell = ({
   return (
     <div
       className='Cell PeriodGroupCell'
-      onMouseEnter={handleMouseEnter}
+      onMouseOver={handleMouseOver}
       onMouseOut={handleMouseout}
     >
       {elementInfo.xpos || elementInfo.ypos}

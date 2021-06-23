@@ -4,10 +4,19 @@ import "./index.css"
 const ElementCell = ({
   elementInfo,
   sendInfoToInfoBox,
+  resetInfoToInfoBox,
   PeriodOrGroupToHighlight,
 }) => {
-  const handleMouseEnter = () => {
+  const handleMouseOver = () => {
     sendInfoToInfoBox(elementInfo)
+  }
+
+  const handleMouseOut = () => {
+    resetInfoToInfoBox()
+  }
+
+  const handleClick = () => {
+    window.open(elementInfo.source, "_blank")
   }
 
   const categoryClass = elementInfo.category.substring(0, 7).trim()
@@ -28,7 +37,9 @@ const ElementCell = ({
       className={`Cell elmtCell ${categoryClass} ${
         highlight() ? "highlight" : ""
       }`}
-      onMouseEnter={handleMouseEnter}
+      onMouseOut={handleMouseOut}
+      onMouseOver={handleMouseOver}
+      onClick={handleClick}
     >
       <div className='elmtNumber'>{elementInfo.number}</div>
       <div className='elmtSymbol'>{elementInfo.symbol}</div>

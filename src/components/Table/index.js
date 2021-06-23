@@ -17,7 +17,6 @@ const Table = () => {
 
   const sendPeriodOrGroupCoordinatesToTable = (periodOrGroupCoordinates) => {
     setPeriodOrGroupToHighlight(periodOrGroupCoordinates)
-    console.log(PeriodOrGroupToHighlight)
   }
 
   return (

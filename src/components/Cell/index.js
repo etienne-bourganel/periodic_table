@@ -15,6 +15,10 @@ const Cell = ({
     updateInfoBox(elementInfo)
   }
 
+  const resetInfoToInfoBox = () => {
+    updateInfoBox({})
+  }
+
   const sendPeriodOrGroupCoordinates = () => {
     sendPeriodOrGroupCoordinatesToTable(coordinates)
   }
@@ -40,6 +44,7 @@ const Cell = ({
       <ElementCell
         elementInfo={elementInfo}
         sendInfoToInfoBox={sendInfoToInfoBox}
+        resetInfoToInfoBox={resetInfoToInfoBox}
         PeriodOrGroupToHighlight={PeriodOrGroupToHighlight}
       />
     )
