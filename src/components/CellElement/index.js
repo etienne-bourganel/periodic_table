@@ -6,7 +6,7 @@ const ElementCell = ({
   sendInfoToInfoBox,
   PeriodOrGroupToHighlight,
 }) => {
-  const handleClick = () => {
+  const handleMouseEnter = () => {
     sendInfoToInfoBox(elementInfo)
   }
 
@@ -28,7 +28,7 @@ const ElementCell = ({
       className={`Cell elmtCell ${categoryClass} ${
         highlight() ? "highlight" : ""
       }`}
-      onClick={handleClick}
+      onMouseEnter={handleMouseEnter}
     >
       <div className='elmtNumber'>{elementInfo.number}</div>
       <div className='elmtSymbol'>{elementInfo.symbol}</div>

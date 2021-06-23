@@ -19,6 +19,10 @@ const Cell = ({
     sendPeriodOrGroupCoordinatesToTable(coordinates)
   }
 
+  const resetPeriodOrGroupCoordinates = () => {
+    sendPeriodOrGroupCoordinatesToTable({ xpos: 0, ypos: 0 })
+  }
+
   const CellIsGroupNr = () => {
     return (
       elementInfo.ypos === 0 && elementInfo.xpos > 0 && elementInfo.xpos < 19
@@ -44,6 +48,7 @@ const Cell = ({
       <PeriodGroupCell
         elementInfo={elementInfo}
         sendPeriodOrGroupCoordinates={sendPeriodOrGroupCoordinates}
+        resetPeriodOrGroupCoordinates={resetPeriodOrGroupCoordinates}
       />
     )
   } else if (CellIsPeriodNr()) {
@@ -51,6 +56,7 @@ const Cell = ({
       <PeriodGroupCell
         elementInfo={elementInfo}
         sendPeriodOrGroupCoordinates={sendPeriodOrGroupCoordinates}
+        resetPeriodOrGroupCoordinates={resetPeriodOrGroupCoordinates}
       />
     )
   } else return <div className='Cell emptyCell'></div>
