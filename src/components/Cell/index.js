@@ -27,7 +27,7 @@ const Cell = ({
 
   const CellIsPeriodNr = () => {
     return (
-      elementInfo.xpos === 0 && elementInfo.ypos > 0 && elementInfo.ypos < 8
+      elementInfo.xpos === 0 && elementInfo.ypos > 0 && elementInfo.ypos < 9
     )
   }
 
