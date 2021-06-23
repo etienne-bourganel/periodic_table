@@ -1,15 +1,28 @@
 import React from "react"
 import "./index.css"
 
-const ElementCell = ({ elementInfo, sendInfoToInfoBox }) => {
+const ElementCell = ({
+  elementInfo,
+  sendInfoToInfoBox,
+  PeriodOrGroupToHighlight,
+}) => {
   const handleClick = () => {
     sendInfoToInfoBox(elementInfo)
   }
 
   const categoryClass = elementInfo.category.substring(0, 7).trim()
 
+  let highlight =
+    PeriodOrGroupToHighlight.xpos === elementInfo.xpos ||
+    PeriodOrGroupToHighlight.ypos === elementInfo.ypos
+
   return (
-    <div className={`Cell elmtCell ${categoryClass} `} onClick={handleClick}>
+    <div
+      className={`Cell elmtCell ${categoryClass} ${
+        highlight ? "highlight" : ""
+      }`}
+      onClick={handleClick}
+    >
       <div className='elmtNumber'>{elementInfo.number}</div>
       <div className='elmtSymbol'>{elementInfo.symbol}</div>
       <div className='elmtName'>{elementInfo.name}</div>

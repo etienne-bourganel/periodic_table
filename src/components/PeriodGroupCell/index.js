@@ -1,9 +1,9 @@
 import React from "react"
 import "./index.css"
 
-const PeriodGroupCell = ({ elementInfo, sendPeriodOrGroupNr }) => {
+const PeriodGroupCell = ({ elementInfo, sendPeriodOrGroupCoordinates }) => {
   const handleMouseEnter = () => {
-    sendPeriodOrGroupNr(elementInfo)
+    sendPeriodOrGroupCoordinates(elementInfo)
   }
 
   return (

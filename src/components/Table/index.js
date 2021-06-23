@@ -15,8 +15,8 @@ const Table = () => {
 
   const [PeriodOrGroupToHighlight, setPeriodOrGroupToHighlight] = useState({})
 
-  const sendPeriodOrGroupNrToTable = (periodOrGroupNr) => {
-    setPeriodOrGroupToHighlight(periodOrGroupNr)
+  const sendPeriodOrGroupCoordinatesToTable = (periodOrGroupCoordinates) => {
+    setPeriodOrGroupToHighlight(periodOrGroupCoordinates)
     console.log(PeriodOrGroupToHighlight)
   }
 
@@ -28,7 +28,10 @@ const Table = () => {
             key={`x${cellInfo.xpos}y${cellInfo.ypos}`}
             elementInfo={cellInfo}
             updateInfoBox={updateInfoBox}
-            sendPeriodOrGroupNrToTable={sendPeriodOrGroupNrToTable}
+            sendPeriodOrGroupCoordinatesToTable={
+              sendPeriodOrGroupCoordinatesToTable
+            }
+            PeriodOrGroupToHighlight={PeriodOrGroupToHighlight}
           />
         ))}
       </div>
