@@ -13,6 +13,13 @@ const Table = () => {
 
   const [InfoBoxData, setInfoBoxData] = useState({})
 
+  const [PeriodOrGroupToHighlight, setPeriodOrGroupToHighlight] = useState({})
+
+  const sendPeriodOrGroupNrToTable = (periodOrGroupNr) => {
+    setPeriodOrGroupToHighlight(periodOrGroupNr)
+    console.log(PeriodOrGroupToHighlight)
+  }
+
   return (
     <div className='TableAndInfoBoxContainer'>
       <div className='Table'>
@@ -21,6 +28,7 @@ const Table = () => {
             key={`x${cellInfo.xpos}y${cellInfo.ypos}`}
             elementInfo={cellInfo}
             updateInfoBox={updateInfoBox}
+            sendPeriodOrGroupNrToTable={sendPeriodOrGroupNrToTable}
           />
         ))}
       </div>

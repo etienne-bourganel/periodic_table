@@ -5,3 +5,8 @@
   font-size: 2vw;
   justify-content: center;
 }
+
+.PeriodGroupCell:hover {
+  color: #61dafb;
+  font-weight: 600;
+}

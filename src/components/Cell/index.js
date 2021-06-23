@@ -3,9 +3,13 @@ import "./index.css"
 import PeriodGroupCell from "../PeriodGroupCell"
 import ElementCell from "../CellElement"
 
-const Cell = ({ elementInfo, updateInfoBox }) => {
+const Cell = ({ elementInfo, updateInfoBox, sendPeriodOrGroupNrToTable }) => {
   const sendInfoToInfoBox = () => {
     updateInfoBox(elementInfo)
+  }
+
+  const sendPeriodOrGroupNr = () => {
+    sendPeriodOrGroupNrToTable(elementInfo)
   }
 
   const CellIsGroupNr = () => {
@@ -28,9 +32,19 @@ const Cell = ({ elementInfo, updateInfoBox }) => {
       />
     )
   } else if (CellIsGroupNr()) {
-    return <PeriodGroupCell props={elementInfo.xpos} />
+    return (
+      <PeriodGroupCell
+        elementInfo={elementInfo}
+        sendPeriodOrGroupNr={sendPeriodOrGroupNr}
+      />
+    )
   } else if (CellIsPeriodNr()) {
-    return <PeriodGroupCell props={elementInfo.ypos} />
+    return (
+      <PeriodGroupCell
+        elementInfo={elementInfo}
+        sendPeriodOrGroupNr={sendPeriodOrGroupNr}
+      />
+    )
   } else return <div className='Cell emptyCell'></div>
 }
 
