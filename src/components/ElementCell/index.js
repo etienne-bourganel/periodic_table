@@ -35,8 +35,8 @@ const ElementCell = ({
       className={`Cell elmtCell ${categoryClass} ${
         highlight() ? "highlight" : ""
       }`}
-      onMouseOut={handleMouseOut}
-      onMouseOver={handleMouseOver}
+      onMouseLeave={handleMouseOut}
+      onMouseEnter={handleMouseOver}
       onClick={handleClick}
     >
       <div className='elmtNumber'>{elementInfo.number}</div>

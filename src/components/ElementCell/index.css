@@ -106,7 +106,11 @@
 }
 
 .highlight {
-  background-color: rgb(86, 0, 52);
+  background: linear-gradient(
+    144deg,
+    rgba(79, 33, 110, 1) 29%,
+    rgba(142, 12, 12, 1) 100%
+  );
   border: 1px solid #fff;
   color: #fff;
   padding: 0.15em;

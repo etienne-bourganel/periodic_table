@@ -39,7 +39,7 @@ const Cell = ({
     )
   }
 
-  if (elementInfo.name) {
+  if (elementInfo.symbol) {
     return (
       <ElementCell
         elementInfo={elementInfo}
@@ -52,6 +52,8 @@ const Cell = ({
     return (
       <PeriodGroupCell
         elementInfo={elementInfo}
+        sendInfoToInfoBox={sendInfoToInfoBox}
+        resetInfoToInfoBox={resetInfoToInfoBox}
         sendPeriodOrGroupCoordinates={sendPeriodOrGroupCoordinates}
         resetPeriodOrGroupCoordinates={resetPeriodOrGroupCoordinates}
       />
@@ -60,6 +62,8 @@ const Cell = ({
     return (
       <PeriodGroupCell
         elementInfo={elementInfo}
+        sendInfoToInfoBox={sendInfoToInfoBox}
+        resetInfoToInfoBox={resetInfoToInfoBox}
         sendPeriodOrGroupCoordinates={sendPeriodOrGroupCoordinates}
         resetPeriodOrGroupCoordinates={resetPeriodOrGroupCoordinates}
       />

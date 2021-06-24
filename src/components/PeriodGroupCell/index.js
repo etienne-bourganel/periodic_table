@@ -3,15 +3,19 @@ import "./index.css"
 
 const PeriodGroupCell = ({
   elementInfo,
+  sendInfoToInfoBox,
+  resetInfoToInfoBox,
   sendPeriodOrGroupCoordinates,
   resetPeriodOrGroupCoordinates,
 }) => {
   const handleMouseOver = () => {
     sendPeriodOrGroupCoordinates()
+    sendInfoToInfoBox()
   }
 
   const handleMouseout = () => {
     resetPeriodOrGroupCoordinates()
+    resetInfoToInfoBox()
   }
 
   const handleClick = () => {

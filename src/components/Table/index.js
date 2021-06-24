@@ -7,8 +7,10 @@ import createPeriodicTable from "../../modules/createPeriodicTable"
 const Table = () => {
   const tableTemplate = createPeriodicTable()
 
-  const updateInfoBox = (elementInfo) => {
-    setInfoBoxData(elementInfo)
+  const updateInfoBox = (infoObject) => {
+    console.log(InfoBoxData)
+    setInfoBoxData(infoObject)
+    console.log(InfoBoxData)
   }
 
   const [InfoBoxData, setInfoBoxData] = useState({})
@@ -35,7 +37,7 @@ const Table = () => {
         ))}
       </div>
       <div>
-        <InfoBox ElementInfoJSON={InfoBoxData} />
+        <InfoBox infoBoxData={InfoBoxData} />
       </div>
     </div>
   )
