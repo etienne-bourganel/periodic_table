@@ -1,4 +1,5 @@
 const periodicTable = require("../data/data.json")
+const periods_groups = require("../data/periods_groups.json")
 
 const createPeriodicTable = () => {
   let emptyTable = []
@@ -16,7 +17,15 @@ const createPeriodicTable = () => {
       ) || { ...cell, data: null }
   )
 
-  return tableTemplate
+  const newTableTemplate = tableTemplate.map(
+    (cell) =>
+      periods_groups.periods_groups.find(
+        (periodOrGroup) =>
+          periodOrGroup.xpos === cell.xpos && periodOrGroup.ypos === cell.ypos
+      ) || { ...cell, data: null }
+  )
+
+  return newTableTemplate
 }
 
 export default createPeriodicTable

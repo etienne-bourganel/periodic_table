@@ -1,6 +1,5 @@
 import React from "react"
 import "./index.css"
-const periods_groups = require("../../data/periods_groups.json")
 
 const PeriodGroupCell = ({
   elementInfo,
@@ -16,7 +15,7 @@ const PeriodGroupCell = ({
   }
 
   const handleClick = () => {
-    window.open(periods_groups.periods_groups.source, "_blank")
+    window.open(elementInfo.source, "_blank")
   }
 
   return (

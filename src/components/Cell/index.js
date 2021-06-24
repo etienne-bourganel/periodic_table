@@ -1,7 +1,7 @@
 import React from "react"
 import "./index.css"
 import PeriodGroupCell from "../PeriodGroupCell"
-import ElementCell from "../CellElement"
+import ElementCell from "../ElementCell"
 
 const Cell = ({
   elementInfo,
