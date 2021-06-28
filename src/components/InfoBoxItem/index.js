@@ -6,7 +6,9 @@ const InfoBoxItem = ({ infoItemTitle, infoItem }) => {
 
   return (
     <div className={`InfoBoxItem ${itemTitleClass} `}>
-      <span className='InfoTitle'>{infoItemTitle}</span>
+      <span className='InfoTitle'>
+        {infoItemTitle === "Name: " ? "" : infoItemTitle}
+      </span>
       <span className='InfoItem'>{infoItem}</span>
     </div>
   )

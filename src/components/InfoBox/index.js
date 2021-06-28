@@ -4,13 +4,13 @@ import InfoBoxItem from "../InfoBoxItem"
 
 const InfoBox = ({ infoBoxData }) => {
   const elementInfoToShow = [
-    "symbol",
     "name",
-    "atomic_mass",
+    "symbol",
     "category",
-    "density",
     "discovered_by",
     "phase",
+    "atomic_mass",
+    "density",
     "summary",
   ]
 

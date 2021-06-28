@@ -12,6 +12,17 @@ const AppHeader = () => {
       >
         Periodic Table of Elements
       </a>
+      <div className='credits'>
+        Made by{" "}
+        <a
+          className='creditsName'
+          href='https://github.com/etienne-bourganel'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          Etienne Bourganel
+        </a>
+      </div>
     </header>
   )
 }

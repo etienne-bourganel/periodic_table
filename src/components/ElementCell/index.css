@@ -6,30 +6,30 @@
     "elmtSymbol elmtNumber"
     "elmtName elmtName"
     "elmtInfo elmtInfo";
-  padding: 0.15em;
+  padding: 0.13em;
 }
 
 .elmtNumber {
   grid-area: elmtNumber;
-  font-size: 1vw;
+  font-size: 0.6vw;
   text-align: end;
 }
 
 .elmtSymbol {
   grid-area: elmtSymbol;
-  font-size: 1.5vw;
+  font-size: 1vw;
 }
 
 .elmtName {
   color: #fff;
   font-weight: 500;
   grid-area: elmtName;
-  font-size: 0.65vw;
+  font-size: 0.43vw;
 }
 
 .elmtInfo {
   grid-area: elmtInfo;
-  font-size: 0.8vw;
+  font-size: 0.55vw;
 }
 
 .diatomi {
@@ -100,18 +100,12 @@
 
 .elmtCell:hover {
   background-color: rgb(0, 6, 50);
-  border: 2px solid #fff;
+  border: 1px solid #fff;
   color: #fc620f;
-  padding: 0.1em;
 }
 
 .highlight {
-  background: linear-gradient(
-    144deg,
-    rgba(79, 33, 110, 1) 29%,
-    rgba(142, 12, 12, 1) 100%
-  );
+  background: linear-gradient(144deg, rgb(52, 14, 77) 29%, rgb(91, 6, 6) 100%);
   border: 1px solid #fff;
   color: #fff;
-  padding: 0.15em;
 }

@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   font-size: calc(10px + 2vmin);
-  height: 10vh;
+  height: 20vh;
   justify-content: center;
   text-align: center;
 }
@@ -13,6 +13,25 @@
   color: #61dafb;
   font-family: "Pacifico", cursive;
   font-size: 3vw;
+  text-decoration: none;
+}
+
+.credits {
+  color: white;
+  font-size: 0.5em;
+  margin-top: 1em;
+}
+
+.creditsName {
+  color: #61dafb;
+  text-decoration: none;
+}
+
+.creditsName:hover {
+  color: #fbd461;
+}
+
+.creditsName:visited {
   text-decoration: none;
 }
 
