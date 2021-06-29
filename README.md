@@ -2,4 +2,6 @@
 
 This app is a part of a project for learning React.
 
-The data used comes from https://github.com/Bowserinator/Periodic-Table-JSON
+The deployed version is here: https://etienne-bourganel.github.io/periodic_table/
+
+The data comes from https://github.com/Bowserinator/Periodic-Table-JSON
