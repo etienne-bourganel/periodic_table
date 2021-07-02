@@ -6,10 +6,14 @@ import ElementCell from "../ElementCell"
 const Cell = ({
   elementInfo,
   updateInfoBox,
-  sendPeriodOrGroupCoordinatesToTable,
-  PeriodOrGroupToHighlight,
+  sendMildlyHighlightPeriodOrGroupToTable,
+  sendHeavilyHighlightPeriodOrGroupToTable,
+  groupOrPeriodToMildlyHighlight,
+  groupOrPeriodToHeavilyHighlight,
 }) => {
-  const coordinates = (({ xpos, ypos }) => ({ xpos, ypos }))(elementInfo)
+  const periodOrGroupCoordinates = (({ xpos, ypos }) => ({ xpos, ypos }))(
+    elementInfo
+  )
 
   const sendInfoToInfoBox = () => {
     updateInfoBox(elementInfo)
@@ -19,12 +23,16 @@ const Cell = ({
     updateInfoBox({})
   }
 
-  const sendPeriodOrGroupCoordinates = () => {
-    sendPeriodOrGroupCoordinatesToTable(coordinates)
+  const mildlyHighlightPeriodOrGroup = () => {
+    sendMildlyHighlightPeriodOrGroupToTable(periodOrGroupCoordinates)
   }
 
-  const resetPeriodOrGroupCoordinates = () => {
-    sendPeriodOrGroupCoordinatesToTable({ xpos: 0, ypos: 0 })
+  const stopHighlightingPeriodOrGroup = () => {
+    sendMildlyHighlightPeriodOrGroupToTable({ xpos: 0, ypos: 0 })
+  }
+
+  const heavilyHighlightPeriodOrGroup = () => {
+    sendHeavilyHighlightPeriodOrGroupToTable(periodOrGroupCoordinates)
   }
 
   const CellIsGroupNr = () => {
@@ -45,7 +53,8 @@ const Cell = ({
         elementInfo={elementInfo}
         sendInfoToInfoBox={sendInfoToInfoBox}
         resetInfoToInfoBox={resetInfoToInfoBox}
-        PeriodOrGroupToHighlight={PeriodOrGroupToHighlight}
+        groupOrPeriodToMildlyHighlight={groupOrPeriodToMildlyHighlight}
+        groupOrPeriodToHeavilyHighlight={groupOrPeriodToHeavilyHighlight}
       />
     )
   } else if (CellIsGroupNr()) {
@@ -54,8 +63,9 @@ const Cell = ({
         elementInfo={elementInfo}
         sendInfoToInfoBox={sendInfoToInfoBox}
         resetInfoToInfoBox={resetInfoToInfoBox}
-        sendPeriodOrGroupCoordinates={sendPeriodOrGroupCoordinates}
-        resetPeriodOrGroupCoordinates={resetPeriodOrGroupCoordinates}
+        mildlyHighlightPeriodOrGroup={mildlyHighlightPeriodOrGroup}
+        stopHighlightingPeriodOrGroup={stopHighlightingPeriodOrGroup}
+        heavilyHighlightPeriodOrGroup={heavilyHighlightPeriodOrGroup}
       />
     )
   } else if (CellIsPeriodNr()) {
@@ -64,8 +74,9 @@ const Cell = ({
         elementInfo={elementInfo}
         sendInfoToInfoBox={sendInfoToInfoBox}
         resetInfoToInfoBox={resetInfoToInfoBox}
-        sendPeriodOrGroupCoordinates={sendPeriodOrGroupCoordinates}
-        resetPeriodOrGroupCoordinates={resetPeriodOrGroupCoordinates}
+        mildlyHighlightPeriodOrGroup={mildlyHighlightPeriodOrGroup}
+        stopHighlightingPeriodOrGroup={stopHighlightingPeriodOrGroup}
+        heavilyHighlightPeriodOrGroup={heavilyHighlightPeriodOrGroup}
       />
     )
   } else return <div className='Cell emptyCell'></div>

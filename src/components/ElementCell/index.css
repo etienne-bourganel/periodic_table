@@ -104,7 +104,13 @@
   color: #fc620f;
 }
 
-.highlight {
+.mildlyHighlight {
+  background: #85f9d492;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.heavilyHighlight {
   background: linear-gradient(144deg, rgb(52, 14, 77) 29%, rgb(91, 6, 6) 100%);
   border: 1px solid #fff;
   color: #fff;

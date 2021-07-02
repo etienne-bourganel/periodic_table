@@ -5,7 +5,8 @@ const ElementCell = ({
   elementInfo,
   sendInfoToInfoBox,
   resetInfoToInfoBox,
-  PeriodOrGroupToHighlight,
+  groupOrPeriodToMildlyHighlight,
+  groupOrPeriodToHeavilyHighlight,
 }) => {
   const handleMouseOver = () => {
     sendInfoToInfoBox(elementInfo)
@@ -21,19 +22,32 @@ const ElementCell = ({
 
   const categoryClass = elementInfo.category.substring(0, 7).trim()
 
-  let highlight = () => {
+  let mildlyHighlight = () => {
     return (
-      PeriodOrGroupToHighlight.xpos === elementInfo.xpos ||
-      PeriodOrGroupToHighlight.ypos === elementInfo.ypos ||
-      (PeriodOrGroupToHighlight.ypos === 6) & (elementInfo.ypos === 9) ||
-      (PeriodOrGroupToHighlight.ypos === 7) & (elementInfo.ypos === 10)
+      groupOrPeriodToMildlyHighlight.xpos === elementInfo.xpos ||
+      groupOrPeriodToMildlyHighlight.ypos === elementInfo.ypos ||
+      (groupOrPeriodToMildlyHighlight.ypos === 6) & (elementInfo.ypos === 9) ||
+      (groupOrPeriodToMildlyHighlight.ypos === 7) & (elementInfo.ypos === 10)
+    )
+  }
+
+  let heavilyHighlight = () => {
+    return (
+      groupOrPeriodToHeavilyHighlight.xpos === elementInfo.xpos ||
+      groupOrPeriodToHeavilyHighlight.ypos === elementInfo.ypos ||
+      (groupOrPeriodToHeavilyHighlight.ypos === 6) & (elementInfo.ypos === 9) ||
+      (groupOrPeriodToHeavilyHighlight.ypos === 7) & (elementInfo.ypos === 10)
     )
   }
 
   return (
     <div
       className={`Cell elmtCell ${categoryClass} ${
-        highlight() ? "highlight" : ""
+        mildlyHighlight()
+          ? "mildlyHighlight"
+          : heavilyHighlight()
+          ? "heavilyHighlight"
+          : ""
       }`}
       onMouseLeave={handleMouseOut}
       onMouseEnter={handleMouseOver}

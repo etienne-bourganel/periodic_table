@@ -15,10 +15,26 @@ const Table = () => {
 
   const [InfoBoxData, setInfoBoxData] = useState({})
 
-  const [PeriodOrGroupToHighlight, setPeriodOrGroupToHighlight] = useState({})
+  const [
+    MildHighlightPeriodOrGroupCoordinates,
+    setMildHighlightPeriodOrGroupCoordinates,
+  ] = useState({})
 
-  const sendPeriodOrGroupCoordinatesToTable = (periodOrGroupCoordinates) => {
-    setPeriodOrGroupToHighlight(periodOrGroupCoordinates)
+  const [
+    HeavyHighlightPeriodOrGroupCoordinates,
+    setHeavilyHighlightPeriodOrGroupCoordinates,
+  ] = useState({})
+
+  const sendMildlyHighlightPeriodOrGroupToTable = (
+    periodOrGroupCoordinates
+  ) => {
+    setMildHighlightPeriodOrGroupCoordinates(periodOrGroupCoordinates)
+  }
+
+  const sendHeavilyHighlightPeriodOrGroupToTable = (
+    periodOrGroupCoordinates
+  ) => {
+    setHeavilyHighlightPeriodOrGroupCoordinates(periodOrGroupCoordinates)
   }
 
   return (
@@ -29,10 +45,18 @@ const Table = () => {
             key={`x${cellInfo.xpos}y${cellInfo.ypos}`}
             elementInfo={cellInfo}
             updateInfoBox={updateInfoBox}
-            sendPeriodOrGroupCoordinatesToTable={
-              sendPeriodOrGroupCoordinatesToTable
+            sendMildlyHighlightPeriodOrGroupToTable={
+              sendMildlyHighlightPeriodOrGroupToTable
             }
-            PeriodOrGroupToHighlight={PeriodOrGroupToHighlight}
+            sendHeavilyHighlightPeriodOrGroupToTable={
+              sendHeavilyHighlightPeriodOrGroupToTable
+            }
+            groupOrPeriodToMildlyHighlight={
+              MildHighlightPeriodOrGroupCoordinates
+            }
+            groupOrPeriodToHeavilyHighlight={
+              HeavyHighlightPeriodOrGroupCoordinates
+            }
           />
         ))}
       </div>

@@ -5,19 +5,21 @@ const PeriodGroupCell = ({
   elementInfo,
   sendInfoToInfoBox,
   resetInfoToInfoBox,
-  sendPeriodOrGroupCoordinates,
-  resetPeriodOrGroupCoordinates,
+  mildlyHighlightPeriodOrGroup,
+  stopHighlightingPeriodOrGroup,
+  heavilyHighlightPeriodOrGroup,
 }) => {
   const handleMouseOver = () => {
-    sendPeriodOrGroupCoordinates()
+    mildlyHighlightPeriodOrGroup()
   }
 
   const handleMouseout = () => {
-    resetPeriodOrGroupCoordinates()
+    stopHighlightingPeriodOrGroup()
   }
 
   const handleClick = () => {
     sendInfoToInfoBox()
+    heavilyHighlightPeriodOrGroup()
   }
 
   return (
