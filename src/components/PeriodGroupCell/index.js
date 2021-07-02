@@ -10,16 +10,14 @@ const PeriodGroupCell = ({
 }) => {
   const handleMouseOver = () => {
     sendPeriodOrGroupCoordinates()
-    sendInfoToInfoBox()
   }
 
   const handleMouseout = () => {
     resetPeriodOrGroupCoordinates()
-    resetInfoToInfoBox()
   }
 
   const handleClick = () => {
-    window.open(elementInfo.source, "_blank")
+    sendInfoToInfoBox()
   }
 
   return (
