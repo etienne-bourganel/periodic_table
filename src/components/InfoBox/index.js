@@ -36,6 +36,7 @@ const InfoBox = ({ infoBoxData }) => {
             key={infoItem}
             infoItemTitle={titlefy(infoItem)}
             infoItem={infoBoxData[infoItem]}
+            allData={infoBoxData}
           />
         ))}
       </div>
@@ -48,6 +49,7 @@ const InfoBox = ({ infoBoxData }) => {
             key={infoItem}
             infoItemTitle={titlefy(infoItem)}
             infoItem={infoBoxData[infoItem]}
+            allData={infoBoxData}
           />
         ))}
       </div>
