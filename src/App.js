@@ -1,4 +1,4 @@
-import "./App.css"
+import "./index.css"
 import React from "react"
 import Table from "./components/Table"
 import AppHeader from "./components/AppHeader"

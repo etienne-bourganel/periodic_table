@@ -105,13 +105,13 @@
 }
 
 .mildlyHighlight {
-  background: #85f9d492;
-  border: 1px solid #fff;
+  background: #0ce4a092;
+  border: 1px solid rgb(225, 218, 20);
   color: #fff;
 }
 
 .heavilyHighlight {
-  background: linear-gradient(144deg, rgb(52, 14, 77) 29%, rgb(91, 6, 6) 100%);
-  border: 1px solid #fff;
+  background: rgba(213, 206, 4, 0.852);
+  border: 1px solid rgb(225, 99, 20);
   color: #fff;
 }
