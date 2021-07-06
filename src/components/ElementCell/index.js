@@ -5,19 +5,25 @@ const ElementCell = ({
   elementInfo,
   sendInfoToInfoBox,
   resetInfoToInfoBox,
+  selectElementCell,
+  selectedElement,
+  stopHeavilyHighlightingPeriodOrGroup,
   groupOrPeriodToMildlyHighlight,
   groupOrPeriodToHeavilyHighlight,
 }) => {
   const handleMouseOver = () => {
-    sendInfoToInfoBox(elementInfo)
+    // sendInfoToInfoBox(elementInfo)
   }
 
   const handleMouseOut = () => {
-    resetInfoToInfoBox()
+    // resetInfoToInfoBox()
   }
 
   const handleClick = () => {
-    window.open(elementInfo.source, "_blank")
+    sendInfoToInfoBox(elementInfo)
+    stopHeavilyHighlightingPeriodOrGroup()
+    selectElementCell()
+    // window.open(elementInfo.source, "_blank")
   }
 
   const categoryClass = elementInfo.category.substring(0, 7).trim()
@@ -40,6 +46,13 @@ const ElementCell = ({
     )
   }
 
+  let selectionHighlight = () => {
+    return (
+      selectedElement.xpos === elementInfo.xpos &&
+      selectedElement.ypos === elementInfo.ypos
+    )
+  }
+
   return (
     <div
       className={`Cell elmtCell ${categoryClass} ${
@@ -48,7 +61,7 @@ const ElementCell = ({
           : heavilyHighlight()
           ? "heavilyHighlight"
           : ""
-      }`}
+      } ${selectionHighlight() ? "selectionHighlight" : ""}`}
       onMouseLeave={handleMouseOut}
       onMouseEnter={handleMouseOver}
       onClick={handleClick}

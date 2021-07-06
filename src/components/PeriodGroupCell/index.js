@@ -6,7 +6,8 @@ const PeriodGroupCell = ({
   sendInfoToInfoBox,
   resetInfoToInfoBox,
   mildlyHighlightPeriodOrGroup,
-  stopHighlightingPeriodOrGroup,
+  stopMildlyHighlightingPeriodOrGroup,
+  deselectElementCell,
   heavilyHighlightPeriodOrGroup,
 }) => {
   const handleMouseOver = () => {
@@ -14,12 +15,13 @@ const PeriodGroupCell = ({
   }
 
   const handleMouseout = () => {
-    stopHighlightingPeriodOrGroup()
+    stopMildlyHighlightingPeriodOrGroup()
   }
 
   const handleClick = () => {
     sendInfoToInfoBox()
     heavilyHighlightPeriodOrGroup()
+    deselectElementCell()
   }
 
   return (

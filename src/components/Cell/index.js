@@ -6,14 +6,14 @@ import ElementCell from "../ElementCell"
 const Cell = ({
   elementInfo,
   updateInfoBox,
+  selectedElement,
+  sendSelectedElementCellToTable,
   sendMildlyHighlightPeriodOrGroupToTable,
   sendHeavilyHighlightPeriodOrGroupToTable,
   groupOrPeriodToMildlyHighlight,
   groupOrPeriodToHeavilyHighlight,
 }) => {
-  const periodOrGroupCoordinates = (({ xpos, ypos }) => ({ xpos, ypos }))(
-    elementInfo
-  )
+  const coordinates = (({ xpos, ypos }) => ({ xpos, ypos }))(elementInfo)
 
   const sendInfoToInfoBox = () => {
     updateInfoBox(elementInfo)
@@ -23,16 +23,28 @@ const Cell = ({
     updateInfoBox({})
   }
 
-  const mildlyHighlightPeriodOrGroup = () => {
-    sendMildlyHighlightPeriodOrGroupToTable(periodOrGroupCoordinates)
+  const selectElementCell = () => {
+    sendSelectedElementCellToTable(coordinates)
   }
 
-  const stopHighlightingPeriodOrGroup = () => {
+  const deselectElementCell = () => {
+    sendSelectedElementCellToTable({ xpos: 0, ypos: 0 })
+  }
+
+  const mildlyHighlightPeriodOrGroup = () => {
+    sendMildlyHighlightPeriodOrGroupToTable(coordinates)
+  }
+
+  const stopMildlyHighlightingPeriodOrGroup = () => {
     sendMildlyHighlightPeriodOrGroupToTable({ xpos: 0, ypos: 0 })
   }
 
   const heavilyHighlightPeriodOrGroup = () => {
-    sendHeavilyHighlightPeriodOrGroupToTable(periodOrGroupCoordinates)
+    sendHeavilyHighlightPeriodOrGroupToTable(coordinates)
+  }
+
+  const stopHeavilyHighlightingPeriodOrGroup = () => {
+    sendHeavilyHighlightPeriodOrGroupToTable({ xpos: 0, ypos: 0 })
   }
 
   const CellIsGroupNr = () => {
@@ -53,6 +65,11 @@ const Cell = ({
         elementInfo={elementInfo}
         sendInfoToInfoBox={sendInfoToInfoBox}
         resetInfoToInfoBox={resetInfoToInfoBox}
+        selectElementCell={selectElementCell}
+        selectedElement={selectedElement}
+        stopHeavilyHighlightingPeriodOrGroup={
+          stopHeavilyHighlightingPeriodOrGroup
+        }
         groupOrPeriodToMildlyHighlight={groupOrPeriodToMildlyHighlight}
         groupOrPeriodToHeavilyHighlight={groupOrPeriodToHeavilyHighlight}
       />
@@ -64,7 +81,10 @@ const Cell = ({
         sendInfoToInfoBox={sendInfoToInfoBox}
         resetInfoToInfoBox={resetInfoToInfoBox}
         mildlyHighlightPeriodOrGroup={mildlyHighlightPeriodOrGroup}
-        stopHighlightingPeriodOrGroup={stopHighlightingPeriodOrGroup}
+        stopMildlyHighlightingPeriodOrGroup={
+          stopMildlyHighlightingPeriodOrGroup
+        }
+        deselectElementCell={deselectElementCell}
         heavilyHighlightPeriodOrGroup={heavilyHighlightPeriodOrGroup}
       />
     )
@@ -75,7 +95,10 @@ const Cell = ({
         sendInfoToInfoBox={sendInfoToInfoBox}
         resetInfoToInfoBox={resetInfoToInfoBox}
         mildlyHighlightPeriodOrGroup={mildlyHighlightPeriodOrGroup}
-        stopHighlightingPeriodOrGroup={stopHighlightingPeriodOrGroup}
+        stopMildlyHighlightingPeriodOrGroup={
+          stopMildlyHighlightingPeriodOrGroup
+        }
+        deselectElementCell={deselectElementCell}
         heavilyHighlightPeriodOrGroup={heavilyHighlightPeriodOrGroup}
       />
     )

@@ -99,19 +99,25 @@
 }
 
 .elmtCell:hover {
-  background-color: rgb(0, 6, 50);
-  border: 1px solid #fff;
-  color: #fc620f;
+  background: rgba(213, 122, 52, 0.852);
+  border: 1px solid rgb(225, 99, 20);
+  color: #fff;
 }
 
 .mildlyHighlight {
-  background: #0ce4a092;
-  border: 1px solid rgb(225, 218, 20);
+  background: rgb(202, 235, 103);
+  border: 1px solid rgb(225, 99, 20);
   color: #fff;
 }
 
 .heavilyHighlight {
-  background: rgba(213, 206, 4, 0.852);
+  background: rgb(171, 165, 0);
+  border: 1px solid rgb(225, 99, 20);
+  color: #fff;
+}
+
+.selectionHighlight {
+  background: rgb(171, 0, 0);
   border: 1px solid rgb(225, 99, 20);
   color: #fff;
 }

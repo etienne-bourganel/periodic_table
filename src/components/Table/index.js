@@ -8,12 +8,16 @@ const Table = () => {
   const tableTemplate = createPeriodicTable()
 
   const updateInfoBox = (infoObject) => {
-    console.log(InfoBoxData)
     setInfoBoxData(infoObject)
-    console.log(InfoBoxData)
   }
 
   const [InfoBoxData, setInfoBoxData] = useState({})
+
+  const [selectedElement, setSelectedElement] = useState({})
+
+  const sendSelectedElementCellToTable = (coordinates) => {
+    setSelectedElement(coordinates)
+  }
 
   const [
     MildHighlightPeriodOrGroupCoordinates,
@@ -25,16 +29,12 @@ const Table = () => {
     setHeavilyHighlightPeriodOrGroupCoordinates,
   ] = useState({})
 
-  const sendMildlyHighlightPeriodOrGroupToTable = (
-    periodOrGroupCoordinates
-  ) => {
-    setMildHighlightPeriodOrGroupCoordinates(periodOrGroupCoordinates)
+  const sendMildlyHighlightPeriodOrGroupToTable = (coordinates) => {
+    setMildHighlightPeriodOrGroupCoordinates(coordinates)
   }
 
-  const sendHeavilyHighlightPeriodOrGroupToTable = (
-    periodOrGroupCoordinates
-  ) => {
-    setHeavilyHighlightPeriodOrGroupCoordinates(periodOrGroupCoordinates)
+  const sendHeavilyHighlightPeriodOrGroupToTable = (coordinates) => {
+    setHeavilyHighlightPeriodOrGroupCoordinates(coordinates)
   }
 
   return (
@@ -45,6 +45,8 @@ const Table = () => {
             key={`x${cellInfo.xpos}y${cellInfo.ypos}`}
             elementInfo={cellInfo}
             updateInfoBox={updateInfoBox}
+            selectedElement={selectedElement}
+            sendSelectedElementCellToTable={sendSelectedElementCellToTable}
             sendMildlyHighlightPeriodOrGroupToTable={
               sendMildlyHighlightPeriodOrGroupToTable
             }
