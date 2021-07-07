@@ -1,0 +1,17 @@
+.WikiLink {
+  color: #fb61f1;
+  cursor: pointer;
+  font-size: 1.5vh;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-top: 2em;
+  text-decoration: none;
+}
+
+.WikiLink:hover {
+  color: #fbd461;
+}
+
+.WikiLink:visited {
+  text-decoration: none;
+}

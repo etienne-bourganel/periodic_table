@@ -63,7 +63,7 @@ const Table = () => {
         ))}
       </div>
       <div>
-        <InfoBox infoBoxData={InfoBoxData} />
+        <InfoBox itemData={InfoBoxData} />
       </div>
     </div>
   )

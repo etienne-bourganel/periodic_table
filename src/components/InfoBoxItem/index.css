@@ -1,7 +1,8 @@
 .InfoBoxItem {
   font-size: 1.35vh;
-  height: 3em;
+  /* height: 3em; */
   line-height: 1.5;
+  margin-bottom: 1em;
 }
 
 .InfoTitle {

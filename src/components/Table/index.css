@@ -1,6 +1,6 @@
 .TableAndInfoBoxContainer {
   display: grid;
-  grid-template-areas: "Table InfoBox";
+  grid-template-areas: "Table infoContainer";
   grid-template-columns: 3fr 1fr;
 }
 

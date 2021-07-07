@@ -1,8 +1,9 @@
 import React from "react"
 import "./index.css"
 import InfoBoxItem from "../InfoBoxItem"
+import WikipediaLink from "../WikipediaLink"
 
-const InfoBox = ({ infoBoxData }) => {
+const InfoBox = ({ itemData }) => {
   const elementInfoToShow = [
     "name",
     "symbol",
@@ -21,37 +22,43 @@ const InfoBox = ({ infoBoxData }) => {
   }
 
   const isAnElement = () => {
-    return infoBoxData.symbol
+    return itemData.symbol
   }
 
   const isAPeriodOrGroup = () => {
-    return infoBoxData.name
+    return itemData.name
   }
 
   if (isAnElement()) {
     return (
-      <div className='InfoBox'>
-        {elementInfoToShow.map((infoItem) => (
-          <InfoBoxItem
-            key={infoItem}
-            infoItemTitle={titlefy(infoItem)}
-            infoItem={infoBoxData[infoItem]}
-            allData={infoBoxData}
-          />
-        ))}
+      <div className='infoContainer'>
+        <div className='InfoBox'>
+          {elementInfoToShow.map((infoItem) => (
+            <InfoBoxItem
+              key={infoItem}
+              infoItemTitle={titlefy(infoItem)}
+              infoItem={itemData[infoItem]}
+              allData={itemData}
+            />
+          ))}
+        </div>
+        <WikipediaLink itemData={itemData} />
       </div>
     )
   } else if (isAPeriodOrGroup()) {
     return (
-      <div className='InfoBox PeriodOrGroup'>
-        {periodOrGroupInfoToShow.map((infoItem) => (
-          <InfoBoxItem
-            key={infoItem}
-            infoItemTitle={titlefy(infoItem)}
-            infoItem={infoBoxData[infoItem]}
-            allData={infoBoxData}
-          />
-        ))}
+      <div className='infoContainer'>
+        <div className='InfoBox PeriodOrGroup'>
+          {periodOrGroupInfoToShow.map((infoItem) => (
+            <InfoBoxItem
+              key={infoItem}
+              infoItemTitle={titlefy(infoItem)}
+              infoItem={itemData[infoItem]}
+              allData={itemData}
+            />
+          ))}
+        </div>
+        <WikipediaLink itemData={itemData} />
       </div>
     )
   }
