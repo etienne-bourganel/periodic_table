@@ -53,15 +53,19 @@ const ElementCell = ({
     )
   }
 
+  let highlightType = () => {
+    return mildlyHighlight()
+      ? "mildlyHighlight"
+      : heavilyHighlight()
+      ? "heavilyHighlight"
+      : selectionHighlight()
+      ? "selectionHighlight"
+      : ""
+  }
+
   return (
     <div
-      className={`Cell elmtCell ${categoryClass} ${
-        mildlyHighlight()
-          ? "mildlyHighlight"
-          : heavilyHighlight()
-          ? "heavilyHighlight"
-          : ""
-      } ${selectionHighlight() ? "selectionHighlight" : ""}`}
+      className={`Cell elmtCell ${categoryClass} ${highlightType()}`}
       onMouseLeave={handleMouseOut}
       onMouseEnter={handleMouseOver}
       onClick={handleClick}
