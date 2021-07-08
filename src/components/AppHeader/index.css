@@ -10,10 +10,13 @@
 }
 
 .Title {
-  color: #61dafb;
+  color: #fff;
   font-family: "Pacifico", cursive;
   font-size: 3vw;
   text-decoration: none;
+
+  text-shadow: 0 0 15px #fff, 0 0 20px #49ff18, 0 0 30px #49ff18,
+    0 0 40px #49ff18, 0 0 55px #49ff18;
 }
 
 .credits {
@@ -36,6 +39,6 @@
 }
 
 .Title:visited {
-  color: #61dafb;
+  color: #fff;
   text-decoration: none;
 }
