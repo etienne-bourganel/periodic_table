@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/periodic_table/static/css/main.6d51d0ce.chunk.css",
-    "main.js": "/periodic_table/static/js/main.42157d81.chunk.js",
-    "main.js.map": "/periodic_table/static/js/main.42157d81.chunk.js.map",
+    "main.css": "/periodic_table/static/css/main.5ab5e30a.chunk.css",
+    "main.js": "/periodic_table/static/js/main.b48cf66b.chunk.js",
+    "main.js.map": "/periodic_table/static/js/main.b48cf66b.chunk.js.map",
     "runtime-main.js": "/periodic_table/static/js/runtime-main.7aedeb3c.js",
     "runtime-main.js.map": "/periodic_table/static/js/runtime-main.7aedeb3c.js.map",
     "static/js/2.acaa53e4.chunk.js": "/periodic_table/static/js/2.acaa53e4.chunk.js",
     "static/js/2.acaa53e4.chunk.js.map": "/periodic_table/static/js/2.acaa53e4.chunk.js.map",
     "index.html": "/periodic_table/index.html",
-    "static/css/main.6d51d0ce.chunk.css.map": "/periodic_table/static/css/main.6d51d0ce.chunk.css.map",
+    "static/css/main.5ab5e30a.chunk.css.map": "/periodic_table/static/css/main.5ab5e30a.chunk.css.map",
     "static/js/2.acaa53e4.chunk.js.LICENSE.txt": "/periodic_table/static/js/2.acaa53e4.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.7aedeb3c.js",
     "static/js/2.acaa53e4.chunk.js",
-    "static/css/main.6d51d0ce.chunk.css",
-    "static/js/main.42157d81.chunk.js"
+    "static/css/main.5ab5e30a.chunk.css",
+    "static/js/main.b48cf66b.chunk.js"
   ]
 }
