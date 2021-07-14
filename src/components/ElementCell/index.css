@@ -24,7 +24,7 @@
   color: #fff;
   font-weight: 500;
   grid-area: elmtName;
-  font-size: 0.42vw;
+  font-size: 0.46vw;
 }
 
 .elmtInfo {
@@ -120,4 +120,31 @@
   background: rgb(201, 61, 0);
   border: 1px solid rgb(225, 99, 20);
   color: #fff;
+}
+
+@media screen and (max-width: 1600px) {
+  .elmtName {
+    display: none;
+  }
+
+  .elmtNumber {
+    font-size: 0.85vw;
+  }
+
+  .elmtSymbol {
+    font-size: 1.5vw;
+    margin-bottom: 0.2rem;
+  }
+
+  .elmtInfo {
+    display: none;
+  }
+
+  .elmtCell {
+    grid-template-areas:
+      "elmtNumber elmtNumber"
+      "elmtSymbol elmtSymbol";
+
+    padding-left: 0.2rem;
+  }
 }

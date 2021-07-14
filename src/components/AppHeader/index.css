@@ -5,6 +5,7 @@
   flex-direction: column;
   height: 8vw;
   justify-content: center;
+  margin-top: 1rem;
   text-align: center;
 }
 
@@ -20,6 +21,7 @@
 .credits {
   color: white;
   font-size: 1rem;
+  font-style: italic;
   margin-top: 1rem;
 }
 
