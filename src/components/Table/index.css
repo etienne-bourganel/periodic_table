@@ -1,17 +1,16 @@
 .TableAndInfoBoxContainer {
-  display: grid;
-  grid-template-areas: "tableContainer infoContainer";
-  grid-template-columns: 7fr 2fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  display: flex;
+  margin: 3rem auto;
+  width: 100vw;
 }
 
 .Table {
   display: grid;
-  gap: 0.1em;
-  grid-area: tableContainer;
-  grid-template-columns: repeat(20, 5%);
+  flex: 0 0 70%;
+  height: 100%;
+  gap: 0.1rem;
+  grid-template-columns: repeat(19, 5%);
   grid-template-rows: repeat(11, 1fr);
-  margin: 1em;
   min-width: 760px;
   overflow: hidden;
 }
