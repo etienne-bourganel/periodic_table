@@ -3,9 +3,9 @@
   color: white;
   display: flex;
   flex-direction: column;
-  font-size: calc(10px + 2vmin);
   height: 8vw;
   justify-content: center;
+  margin-top: 1rem;
   text-align: center;
 }
 
@@ -14,15 +14,15 @@
   font-family: "Pacifico", cursive;
   font-size: 3vw;
   text-decoration: none;
-
   text-shadow: 0 0 15px #fff, 0 0 20px #49ff18, 0 0 30px #49ff18,
     0 0 40px #49ff18, 0 0 55px #49ff18;
 }
 
 .credits {
   color: white;
-  font-size: 0.5em;
-  margin-top: 1em;
+  font-size: 1rem;
+  font-style: italic;
+  margin-top: 1rem;
 }
 
 .creditsName {
