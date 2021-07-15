@@ -47,15 +47,12 @@ const Cell = ({
     sendHeavilyHighlightPeriodOrGroupToTable({ xpos: 0, ypos: 0 })
   }
 
-  const CellIsGroupNr = () => {
+  const cellIsPeriodOrGroupNr = () => {
     return (
-      elementInfo.ypos === 0 && elementInfo.xpos > 0 && elementInfo.xpos < 19
-    )
-  }
-
-  const CellIsPeriodNr = () => {
-    return (
-      elementInfo.xpos === 0 && elementInfo.ypos > 0 && elementInfo.ypos < 9
+      (elementInfo.ypos === 0 &&
+        elementInfo.xpos > 0 &&
+        elementInfo.xpos < 19) ||
+      (elementInfo.xpos === 0 && elementInfo.ypos > 0 && elementInfo.ypos < 9)
     )
   }
 
@@ -74,21 +71,7 @@ const Cell = ({
         groupOrPeriodToHeavilyHighlight={groupOrPeriodToHeavilyHighlight}
       />
     )
-  } else if (CellIsGroupNr()) {
-    return (
-      <PeriodGroupCell
-        elementInfo={elementInfo}
-        sendInfoToInfoBox={sendInfoToInfoBox}
-        resetInfoToInfoBox={resetInfoToInfoBox}
-        mildlyHighlightPeriodOrGroup={mildlyHighlightPeriodOrGroup}
-        stopMildlyHighlightingPeriodOrGroup={
-          stopMildlyHighlightingPeriodOrGroup
-        }
-        deselectElementCell={deselectElementCell}
-        heavilyHighlightPeriodOrGroup={heavilyHighlightPeriodOrGroup}
-      />
-    )
-  } else if (CellIsPeriodNr()) {
+  } else if (cellIsPeriodOrGroupNr()) {
     return (
       <PeriodGroupCell
         elementInfo={elementInfo}
